@@ -22,6 +22,8 @@ namespace Lab11_TimePerson.Models
         public static List<TimePerson> GetPerson(int beginningYear, int endYear)
         {
             //instantiate a new list of Time persons
+            List<string> mylist = new List<string>(new string[] { "Year", "Honor", "Name", "Country", "BirthYear", "DeathYear", "Title", "Category", "Context" });
+
             //get the path of your timeperson.csv file - google how to get the root file path for an mvc web application
             //once you get the file path, read all the lines and save it into an array of strings
             //travserse through the strings for each line item
