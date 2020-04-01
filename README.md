@@ -19,7 +19,7 @@ When run, the user enters a beginning year and end year and clicks submit. A que
 Clone this repository to your local machine.
 
 ```
-$ git clone [repo clone url here]
+$ git clone [https://github.com/suetarazi/Lab11-TimePerson.git]
 ```
 
 ### To run the program from Visual Studio:
@@ -27,9 +27,9 @@ Select ```File``` -> ```Open``` -> ```Project/Solution```
 
 Next navigate to the location you cloned the Repository.
 
-Double click on the ```Lab01-About-Me``` directory.
+Double click on the ```Lab11-TimePerson``` directory.
 
-Then select and open ```AboutMe.sln```
+Then select and open ```Lab11-TimePerson.sln```
 
 ---
 
@@ -37,11 +37,9 @@ Then select and open ```AboutMe.sln```
 ***[Add screenshots of your application in action]***
 
 #### Application Start
-![Image 1](https://via.placeholder.com/750x500)
-#### Using the Application
-![Image 1](https://via.placeholder.com/750x500)
+![Image 1](https://i.imgur.com/eeV1MCX.png)
 #### Application End
-![Image 1](https://via.placeholder.com/750x500)
+![Image 1](https://i.imgur.com/kJKRUEb.png)
 
 ---
 
