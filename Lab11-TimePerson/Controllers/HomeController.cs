@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Lab11_TimePerson.Controllers
 {
+    /// <summary>
+    /// Controller file containing 3 IActionResults: an HTTP Get bringing in the beginningYear and endYear as inputted by the user in Index.cshtml, and two HTTP Posts: one to Index sending the beginningYear and endYear data and one to Results.cshtml to it can be shown to the user.
+    /// </summary>
     public class HomeController : Controller
     {
         [HttpGet]

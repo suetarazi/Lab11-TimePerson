@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Lab11_TimePerson.Models
 {
+    /// <summary>
+    /// TimePerson class containing contructor and connection to CSV data file, read of data and query 
+    /// </summary>
     public class TimePerson
     {
         //put all {get; set;} from lab here
@@ -19,6 +22,18 @@ namespace Lab11_TimePerson.Models
         public string Category { get; set; }
         public string Context { get; set; }
 
+        /// <summary>
+        /// Constructor for data from CSV file
+        /// </summary>
+        /// <param name="year">integer year</param>
+        /// <param name="honor">string honor</param>
+        /// <param name="name">string name</param>
+        /// <param name="country">string country</param>
+        /// <param name="birthYear">int birthyear</param>
+        /// <param name="deathYear">int deathyear</param>
+        /// <param name="title">string title</param>
+        /// <param name="category">string category</param>
+        /// <param name="context">string context</param>
         public TimePerson(int year, string honor, string name, string country, int birthYear, int deathYear, string title, string category, string context)
         {
             Year = year;
@@ -33,20 +48,25 @@ namespace Lab11_TimePerson.Models
 
         }
 
-
+        /// <summary>
+        /// Instantiation of TimePerson, getting the timeperson.csv file, receiving all data as a string type, converting int types back to int, then running query
+        /// </summary>
+        /// <param name="beginningYear">int beginningYear as inputted by end user</param>
+        /// <param name="endYear">int endYear as inputted by end user</param>
+        /// <returns></returns>
         public static List<TimePerson> GetPerson(int beginningYear, int endYear)
         {
             //instantiate a new list of Time persons
             List<TimePerson> timePeople = new List<TimePerson>();
 
             //get the path of your timeperson.csv file - google how to get the root file path for an mvc web application
-            string[] timeData = File.ReadAllLines("./wwwroot/personOfTheYear.csv");
-            Console.WriteLine(timeData);
+            var path = Environment.CurrentDirectory;
+            var newPath = Path.GetFullPath(Path.Combine(path, @"wwwroot/personOfTheYear.csv"));
+            //Console.WriteLine(timeData);
+            string[] timeData = File.ReadAllLines(newPath);
 
             //once you get the file path, read all the lines and save it into an array of strings
             //(new string[] { "Year", "Honor", "Name", "Country", "BirthYear", "DeathYear", "Title", "Category", "Context" });
-
-            //string[] tableHeader = timeData[0].Split(',');
 
             for (var i = 1; i < timeData.Length; i++)
             {
