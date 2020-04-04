@@ -10,13 +10,16 @@ using Microsoft.Extensions.Hosting;
 
 namespace Lab11_TimePerson
 {
+    /// <summary>
+    /// Startup has ConfigureServices and Configure which are called by the runtime to set up the environment. See below for details.
+    /// </summary>
     public class Startup
     {
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            //Sue - add library - dependency for MVC
+            //add library - dependency for MVC
             services.AddMvc();
         }
 
